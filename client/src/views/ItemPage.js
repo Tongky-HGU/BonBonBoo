@@ -1,7 +1,7 @@
-import Component from "./core/Component.js";
-import Items from "./components/Items.js";
-import ItemAppender from "./components/ItemAppender.js";
-import ItemFilter from "./components/ItemFilter.js";
+import Component from "../core/Component.js";
+import Items from "../components/Items.js";
+import ItemAppender from "../components/ItemAppender.js";
+import ItemFilter from "../components/ItemFilter.js";
 
 export default class ItemPage extends Component {
   setup() {

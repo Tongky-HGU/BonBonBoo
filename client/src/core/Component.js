@@ -1,13 +1,11 @@
 export default class Component {
-  $parent;
   $target;
   state;
   props;
 
-  constructor($parent, props) {
-    this.$parent = $parent;
-    this.$target = document.createElement("div");
-    this.$parent.appendChild(this.$target);
+  constructor($target, props) {
+    this.$target = $target;
+    this.$target.innerHTML = "";
     this.props = props;
     this.setup();
     this.setEvent();
