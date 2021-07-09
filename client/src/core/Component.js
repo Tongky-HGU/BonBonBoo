@@ -1,9 +1,13 @@
 export default class Component {
+  $parent;
   $target;
-  props;
   state;
-  constructor($target,props) {
-    this.$target = $target;
+  props;
+
+  constructor($parent, props) {
+    this.$parent = $parent;
+    this.$target = document.createElement("div");
+    this.$parent.appendChild(this.$target);
     this.props = props;
     this.setup();
     this.setEvent();
@@ -11,8 +15,6 @@ export default class Component {
   }
 
   setup() {}
-
-  mounted() {}
 
   template() {
     return "";
@@ -23,12 +25,14 @@ export default class Component {
     this.mounted();
   }
 
-  setEvent() {}
+  mounted() {}
 
   setState(newState) {
     this.state = { ...this.state, ...newState };
     this.render();
   }
+
+  setEvent() {}
 
   addEvent(eventType, selector, callback) {
     const children = [...this.$target.querySelectorAll(selector)];

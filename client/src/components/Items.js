@@ -3,7 +3,6 @@ import Component from "../core/Component.js";
 export default class items extends Component {
   template() {
     const { filteredItems } = this.props;
-    console.log(filteredItems)
     return `
             <ul>
                 ${filteredItems
