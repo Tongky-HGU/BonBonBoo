@@ -15,6 +15,7 @@ export default class items extends Component {
                     </button>
                     <button class="deleteBtn">삭제</buttton>
                   </li>
+                  <a href="/test" data-link>test link</a>
                 `
                   )
                   .join("")}
