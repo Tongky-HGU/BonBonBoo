@@ -1,11 +1,11 @@
 import ItemPage from "./views/ItemPage.js";
-import SpinButton from "./components/SpinButton.js";
+import TestPage from "./views/TestPage.js";
 
 const router = async () => {
   const $root = document.querySelector("#app");
   const routes = [
     { path: "/client/", view: ItemPage },
-    { path: "/test", view: SpinButton },
+    { path: "/test", view: TestPage },
   ];
 
   const potentialMathces = routes.map((route) => {
@@ -25,7 +25,6 @@ const router = async () => {
       isMatch: true,
     };
   }
-  console.log(potentialMathces)
   new match.route.view($root)
 };
 
