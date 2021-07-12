@@ -5,8 +5,6 @@ export default class SpinButton extends Component {
   delay;
 
   setup() {
-    this.$target.className = "spinBtn";
-
     this.state = {
       cnt: 0,
     };
