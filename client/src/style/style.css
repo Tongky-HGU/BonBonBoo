@@ -11,6 +11,10 @@ button {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -34,6 +38,28 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.hidden {
-  display: none;
+.slider {
+  -webkit-appearance: none;
+  /* all: unset; */
+  width: 100%;
+  background: rgb(212, 212, 211);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+  box-shadow: 0px 1px 10px 1px black;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
