@@ -8,8 +8,8 @@ export default class Component {
     this.$target.innerHTML = "";
     this.props = props;
     this.setup();
-    this.setEvent();
     this.render();
+    this.setEvent();
   }
 
   setup() {}
