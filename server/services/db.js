@@ -1,18 +1,7 @@
-require("dotenv").config();
+const config = require("../config/config")
 const mysql = require("mysql");
 
-const { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD } = process.env;
-
-const dbInfo = {
-  connectionLimit: 100,
-  user: MYSQL_USER,
-  password: MYSQL_PASSWORD,
-  host: MYSQL_HOST,
-  port: MYSQL_PORT,
-  database: "STOCK",
-};
-
-const pool = mysql.createPool(dbInfo);
+const pool = mysql.createPool(config.db);
 
 pool.getConnection((err) => {
   if (err) throw new Error(`db connection error. ${err.message}`);
