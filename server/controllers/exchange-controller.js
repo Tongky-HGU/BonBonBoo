@@ -3,7 +3,6 @@ const exchange = require("../services/exchange-service");
 exports.getRate = async (req, res, next) => {
     try {
         let rows = await exchange.getRate()
-        console.log(rows[0])
         return res.json(rows[0])
     } catch (err) {
         return res.status(500).json(err)
