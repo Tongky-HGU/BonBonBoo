@@ -1,11 +1,15 @@
 import ItemPage from "./views/ItemPage.js";
 import TestPage from "./views/TestPage.js";
+import LandingPage from "./views/LandingPage.js";
 
 const router = async () => {
   const $root = document.querySelector("#app");
   const routes = [
-    { path: "/client/", view: ItemPage },
+    { path: "/", view: LandingPage },
     { path: "/test", view: TestPage },
+    { path: "/item", view: ItemPage },
+    { path: "/home", view: LandingPage },
+
   ];
 
   const potentialMathces = routes.map((route) => {
